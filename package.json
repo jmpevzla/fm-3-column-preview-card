@@ -1,0 +1,11 @@
+{
+  "name": "3-column-preview-card-component-main",
+  "version": "1.0.0",
+  "description": "Frontend Mentor | 3-column preview card component",
+  "scripts": {
+    "dist": "mkdir -p dist && cp -r index.html style.css images dist/",
+    "clean": "rm -r dist/*"
+  },
+  "author": "Jose Manuel Perez",
+  "license": "MIT"
+}
