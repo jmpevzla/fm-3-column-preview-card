@@ -7,17 +7,169 @@
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 62.5%;
   box-sizing: border-box;
 }
 
-.attribution { 
-  font-size: 11px; 
-  text-align: center; 
+$very-light-gray: hsl(0, 0%, 95%);
 
-  a { 
-    color: hsl(228, 45%, 44%); 
+body {
+  background-color: $very-light-gray;
+}
+
+.components {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin btn-active {
+  border: .2rem solid $very-light-gray;
+  background-color: inherit;
+  color: $very-light-gray;
+}
+
+.card {
+  $bright-orange: hsl(31, 77%, 52%);
+  $dark-cyan: hsl(184, 100%, 22%);
+  $very-dark-cyan: hsl(179, 100%, 13%);
+
+  $transparent-white: hsla(0, 0%, 100%, 0.75);
+
+  $root: &;
+
+  font-family: 'Lexend Deca', sans-serif;
+  max-width: 32.7rem;
+
+  &__column {
+    padding: 4.8rem;
+  }
+
+  &__column:nth-child(1) {
+    background-color: $bright-orange;
+    border-radius: 8px 8px 0 0;
+
+    #{$root}__button {
+      color: $bright-orange;
+    }
+  }
+
+  &__column:nth-child(2) {
+    background-color: $dark-cyan;
+
+    #{$root}__button {
+      color: $dark-cyan;
+    }
+  }
+
+  &__column:nth-child(3) {
+    background-color: $very-dark-cyan;
+    border-radius: 0 0 8px 8px;
+
+    #{$root}__button {
+      color: $very-dark-cyan;
+    }
+  }
+
+  @for $i from 1 through 3 {
+    &__column:nth-child(#{$i}) {
+      #{$root}__button:active {
+        @include btn-active();
+      }
+    }
+  }
+
+  &__image-container {
+    margin-bottom: 3.3rem;
+  }
+
+  &__title-container {
+    margin-bottom: 2.4rem;
+  }
+
+  &__title {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 4.2rem;
+    text-transform: uppercase;
+    color: $very-light-gray;
+  }
+
+  &__text-container {
+    margin-bottom: 2.4rem;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    color: $transparent-white;
+    line-height: 2.5rem;
+  }
+
+  &__button-container {
+    max-width: 14.8rem;
+    min-height: 4.8rem;
+    display: flex;
+    align-items: stretch;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    background-color: $very-light-gray;
+    text-decoration: none;
   }
 }
-     
+
+@media screen and (min-width: 920px) {
+
+  .components {
+    margin: 2.1rem 0;
+  }
+  
+  .card {
+    min-width: 92rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    $root: &;
+
+    &__column:first-child {
+      border-radius: 8px 0 0 8px;
+    }
+
+    &__column:last-child {
+      border-radius: 0 8px 8px 0;
+    }
+
+    &__text-container {
+      margin-bottom: 8.2rem;
+    }
+
+    @for $i from 1 through 3 {
+      &__column:nth-child(#{$i}) {
+        #{$root}__button:hover {
+          @include btn-active();
+        }
+      }
+    }
+  }
+
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+
+  .attribution { 
+    font-size: 11px; 
+    text-align: center; 
+
+    a { 
+      color: hsl(228, 45%, 44%); 
+    }
+  }
+}
