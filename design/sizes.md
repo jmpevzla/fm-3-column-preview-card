@@ -1,4 +1,4 @@
-# Estimate Sizes
+# Estimated Sizes
 
 ## mobile (375 x 1502)
 
