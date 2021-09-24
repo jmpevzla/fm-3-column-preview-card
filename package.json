@@ -3,9 +3,17 @@
   "version": "1.0.0",
   "description": "Frontend Mentor | 3-column preview card component",
   "scripts": {
-    "dist": "mkdir -p dist && cp -r index.html style.css images dist/",
-    "clean": "rm -r dist/*"
+    "build": "node-sass style.scss style.css --output-style compressed",
+    "dist": "mkdir -p dist && npm run build && cp -r index.html style.css images dist/",
+    "clean": "rm -r dist/*",
+    "postinstall": "node ./node_modules/.bin/husky install"
   },
   "author": "Jose Manuel Perez",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^7.0.2"
+  },
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
 }
