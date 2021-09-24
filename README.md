@@ -9,8 +9,10 @@ This is a solution to the [3-column preview card component coding challenge](htt
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
+  - [Steps](#steps)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
+  - [What I learned about frontend](#what-i-learned-frontend)
+  - [What I learned about deploy](#what-i-learned-deploy)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
@@ -40,14 +42,16 @@ Desktop
 
 ## My process
 
-- To use GIMP Program for measure margin, padding, font-sizes, etc.
-- markup semantic HTML5 with BEM class name methodology.
-- add basic reset SCSS style.
-- add fonts
-- add color variables SCSS.
-- add mobile styles for each section.
-- add media queries for desktop version.
-- better the accuracy with the design.
+### Steps
+
+1. I used GIMP Program for measure margin, padding, font-sizes, etc.
+1. I wrote markup semantic HTML5 with BEM class name methodology.
+1. I added basic reset CSS style.
+1. I added fonts
+1. I added color variables SCSS.
+1. I added mobile styles for each section.
+1. I added media queries for desktop version.
+1. I improved the accuracy with the design.
 
 ### Built with
 
@@ -58,11 +62,12 @@ Desktop
 - CSS Grid
 - Mobile-first
 
-### What I learned
+### <a id="what-i-learned-frontend"></a>What I learned about frontend
 
 - SCSS variables
 - BEM Classes Name
-- SCSS nesting and SCSS "&"
+- SCSS Nesting 
+- SCSS Parent Selector (&)
 - SCSS for loop
 - a layer for margin and padding handling of the children component
 - use external fonts
@@ -70,6 +75,13 @@ Desktop
 - Align items with flexbox.
 - Align items with CSS Grid.
 - hover and active pseudo-classes.
+
+### <a id="what-i-learned-deploy"></a>What I learned about deploy
+
+- Deploy to github pages in its own branch (gh-pages)
+- Workflow config files for github actions
+- git hooks with husky
+- npm scripts for build and create the dist folder
 
 ### Continued development
 
@@ -82,13 +94,17 @@ Desktop
 
 ### Useful resources
 
-- [W3Schools](https://www.w3schools.com) - This helped me for margins-paddings, flexbox and media queries.
+- [W3Schools](https://www.w3schools.com) - This helped me handle margins-paddings, flexbox and media queries.
 
-- [Stackoverflow](stackoverflow.com) - This site have amazing posts for fix and get better semantic HTML5, CSS problems.
+- [Stackoverflow](stackoverflow.com) - This site have amazing posts to fix and improve semantic HTML or CSS issues.
 
 - [CSS-tricks](https://css-tricks.com/bem-101/) - Excellent article to start with BEM Classes methodology.
 
-- [Sass-Docs](https://sass-lang.com/documentation/) - Sass documentation for understand better @mixin, @include and for loop.
+- [Sass-Docs](https://sass-lang.com/documentation/) - Sass documentation to better understand @mixin, @include and for loop.
+
+- [Tutorial Deploy Github Pages](https://roelofjanelsinga.com/articles/how-to-set-up-automatically-deploy-website-github-pages/) - Tutorial to know how to set up automatically deploy website in github pages with husky and npm scripts.
+
+- [Github pages action](https://github.com/marketplace/actions/github-pages-action) - code snippets to facilitate the creation of a workflow file and thus be able to configure github actions to display the view.
 
 ## Author
 
